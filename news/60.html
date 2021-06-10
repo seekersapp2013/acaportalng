@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographics</title>
+    
+
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="icons.css">
+<script src="main.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ACA Portal NG</title>
+        
+
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="icons.css">
+<script src="main.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+<style> 
+/* search box  */
+    
+    .searchBox {
+        /* position: absolute; */
+        /* top: 50%;
+        left: 50%; */
+        /* transform: translate(-50%,-50%); */
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .searchBox input{
+        background-color: #2a30dc;
+        border: none;
+        outline: none;
+        width: 0;
+        padding: 0; 
+        opacity: 0;
+        border-radius: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        color: #fff;
+        transition: all 1s;
+    }
+    
+    .searchBox input::placeholder {
+        color: white;
+        font-weight: 400;
+    }
+    
+    .searchBox:hover input{
+        width: 240px;
+        opacity: 1;
+        padding: 10px 20px;
+
+    }
+    
+    .searchBox:hover i{
+        color: #fff;
+        display: hidden;
+    }
+
+    /* search box ended */
+    
+
+    /* search functionalities */
+
+/* #myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 12px;
+  border: none;
+} */
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL div a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL div a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+       .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f8f7fffa; 
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+
+
+
+/*  */
+
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f8f7fffa;
+  background-color: #f8f7fffa;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 9px;
+  text-decoration: none;
+  font-size: 39px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.mobileshow { 
+display:none; 
+}
+@media screen and (max-width: 500px) {
+.mobileshow { 
+display:block; }
+}
+
+
+        </style> 
+    </head>
+    <body>
+
+
+
+        
+        
+        <nav>
+            
+            <div class="menu">
+                <div class="dropdown item">
+                    <!-- <span>Mouse over me</span> -->
+                    <a href="./about.html" data-action="dropdown" data-target="resources" ><b>About Us</b><i class="fa fa-angle-down"></i></a>
+                 
+                    <div class="dropdown-content">
+                    <!-- <p>Hello World!</p> -->
+                    <div class="dropdown" id="resources">
+                        <ul class="menu">
+                            <li>
+                                <a href="./about.html#CDD" class="item"><h5>CDD</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#MacArthur Foundation"><h5>MacArthur Foundation</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#EFCC"><h5>EFCC</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#ICPC"><h5>ICPC</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#NFIU"><h5>NFIU</h5></a>
+                            </li>
+                            
+                            <li>
+                                <a href="./about.html#OAuGF"><h5>OAuGF</h5></a>
+                            </li>
+                            
+                            <li>
+                                <a href="./about.html#TUGAR"><h5>TUGAR</h5></a>
+                            </li>
+                            
+                            <li>
+                                <a href="./about.html#PACAC"><h5>PACAC</h5></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    </div>
+                  </div>
+                
+
+                <!-- <a class="item" href="./about.html">About Us</a> -->
+
+                <div class="dropdown item">
+                    <!-- <span>Mouse over me</span> -->
+                    <a href="./resources.html" data-action="dropdown" data-target="resources" ><b>Resources</b><i class="fa fa-angle-down"></i></a>
+                 
+                    <div class="dropdown-content">
+                    <!-- <p>Hello World!</p> -->
+                    <div class="dropdown" id="resources">
+                        <ul class="menu">
+                            <li>
+                                <a href="./resources.html"><h5>Publications</h5></a>
+                            </li>
+                            <li>
+                                <a href="./resources.html"><h5>Gallery</h5></a>
+                            </li>
+                            <li>
+                                <a href="./resources.html"><h5>Videos</h5></a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                  </div>
+                  
+                  <div class="dropdown item">
+                    <!-- <span>Mouse over me</span> -->
+                    <a href="./infographics.html" data-action="dropdown" data-target="resources" ><b>Infographics</b><i class="fa fa-angle-down"></i></a>
+                 
+                    <div class="dropdown-content">
+                    <!-- <p>Hello World!</p> -->
+                    <div class="dropdown" id="infographics">
+                        <ul class="menu">
+                            <li>
+                                <a href="./infographics.html"><h5>Governance</h5></a>
+                            </li>
+                            <li>
+                                <a href="./infographics.html"><h5>Convictions & Recovery</h5></a>
+                            </li>
+                            <li>
+                                <a href="./infographics.html"><h5>Citizens</h5></a>
+                            </li>
+                            <li>
+                                <a href="./infographics.html"><h5>Agencies</h5></a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                  </div>
+                
+                
+                </div>
+            </div>
+            <div class="logo">
+                <a class="item" href="./">   <img src="../img/agency4.png" alt="agency4" class="partner"></a>
+                <a class="item" href="./">   <img src="../img/agency6.png" alt="agency6" class="partner"></a>
+                <a class="item" href="./">  <img src="../img/agency5.png" alt="agency5" class="partner"></a>
+                <a class="item" href="./"> <img src="../img/logo.svg" alt="Logo"></a>
+                <a class="item" href="./"> <img src="../img/agency1.png" alt="agency1" class="partner"></a>
+                <a class="item" href="./"> <img src="../img/agency2.png" alt="agency2" class="partner"></a>
+                <a class="item" href="./"> <img src="../img/agency3.png" alt="agency3" class="partner"></a>
+            </div>
+            <div class="menu">
+                <a class="item" href="./blog.html"><b>News & Events</b></a>
+                <a class="item" href="https://app.acaportal.ng/login"><b>Log In</b></a>
+                <a href="https://app.acaportal.ng/register">
+                    <button class="item btn nav blue"><b> Sign Up</b></button>
+                </a>
+                <div class="searchBox">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                    
+                    <i class="icon-search txt-primary"></i>
+                </div>
+               
+            </div>
+            
+            <!-- <i class="icon-menu" data-target="foldable-menu" data-toggle="open"></i> -->
+
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   
+
+    
+    <div class="dropdown item">
+        <!-- <span>Mouse over me</span> -->
+        <a href="#" data-action="dropdown" data-target="resources" style="color: #2a30dc;"><b>About us</b><i class="fa fa-angle-down"></i></a>
+     
+        <div class="dropdown-content">
+        <!-- <p>Hello World!</p> -->
+        <div class="dropdown" id="resources">
+            <ul class="menu">
+                <li>
+                    <a href="./about.html#CDD" class="item"><h5>CDD</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#MacArthur Foundation"><h5>MacArthur Foundation</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#EFCC"><h5>EFCC</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#ICPC"><h5>ICPC</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#NFIU"><h5>NFIU</h5></a>
+                </li>
+                
+                <li>
+                    <a href="./about.html#OAuGF"><h5>OAuGF</h5></a>
+                </li>
+                
+                <li>
+                    <a href="./about.html#TUGAR"><h5>TUGAR</h5></a>
+                </li>
+                
+                <li>
+                    <a href="./about.html#PACAC"><h5>PACAC</h5></a>
+                </li>
+                
+            </ul>
+        </div>
+        </div>
+      </div>
+
+          <div class="dropdown item">
+            <!-- <span>Mouse over me</span> -->
+            <a href="#" data-action="dropdown" data-target="resources" style="color: #2a30dc;"><b>Resources</b><i class="fa fa-angle-down"></i></a>
+         
+            <div class="dropdown-content">
+            <!-- <p>Hello World!</p> -->
+            <div class="dropdown" id="resources">
+                <ul class="menu">
+                    <li>
+                        <a href="./resources.html"><h5>Publications</h5></a>
+                    </li>
+                    <li>
+                        <a href="./resources.html"><h5>Gallery</h5></a>
+                    </li>
+                    <li>
+                        <a href="./resources.html"><h5>Videos</h5></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+          </div>
+
+
+          
+          <div class="dropdown item">
+            <!-- <span>Mouse over me</span> -->
+            <a href="#" data-action="dropdown" data-target="resources" style="color: #2a30dc;"><b>Infographics</b><i class="fa fa-angle-down"></i></a>
+         
+            <div class="dropdown-content">
+            <!-- <p>Hello World!</p> -->
+            <div class="dropdown" id="infographics">
+                <ul class="menu">
+                    <li>
+                        <a href="./infographics.html"><h5>Governance</h5></a>
+                    </li>
+                    <li>
+                        <a href="./infographics.html"><h5>Convictions & Recovery</h5></a>
+                    </li>
+                    <li>
+                        <a href="./infographics.html"><h5>Citizens</h5></a>
+                    </li>
+                    <li>
+                        <a href="./infographics.html"><h5>Agencies</h5></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+          </div>
+
+
+
+
+          <a class="item" href="./blog.html" style="color: #2a30dc;"><b>News & Events</b></a>
+          <a class="item" href="https://app.acaportal.ng/login" style="color: #2a30dc;"><b>Log In</b></a>
+          <a href="https://app.acaportal.ng/register">
+            <button class="item btn small nav blue"><b> Sign Up</b></button>
+        </a>
+        
+          
+          
+    </div>
+  </div>
+  <span style="font-size:30px;cursor:pointer" class="mobileshow" onclick="openNav()">&#9776;</span>
+      
+        </nav>
+
+<!-- search scripts -->
+        
+<script>
+    function myFunction() {
+        var input, filter, ul, div, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        div = ul.getElementsByTagName("div");
+        for (i = 0; i < div.length; i++) {
+            a = div[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                div[i].style.display = "";
+            } else {
+                div[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+
+
+
+        <script>
+            function openNav() {
+              document.getElementById("myNav").style.width = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("myNav").style.width = "0%";
+            }
+            </script>
+            
+    </body>
+</html>
+
+        <main>
+            <div class="hero small" style="background-image: url(img/blog-bg.png); background-position: bottom;">
+                <div class="container no-controls">
+                    <div class="page-info">
+                        <h3 class="txt-primary txt-center m-0" >News & Events</h3>
+                        <p class="txt-white txt-center">Get an update on all what’s happening in the Anti-Corruption Sector</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!--Chat Widgets Starts Here-->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/608ce49462662a09efc3da99/1f4j5ppuk';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+
+
+
+        <div class="section auto-height blog">
+            <div class="col-2">
+                <div class="wid-45 flex-center">
+                    <img src="NewsImage}}" width="100%" alt="Our Partners are key">
+                </div>
+                <div class="wid-36 pad-2">
+                    <div class="head">
+                        <!-- <span class="category">Trending</span> -->
+                        
+                    </div>
+                    <h4>CDD NDLEA Discovers Tons of Fake Drugs in Popular Pharmacy. Owner, Still At Large.</h4>
+                    <p class="txt-dark small">The news has spread like wide fire, taking the public by storm and disappointing a good number of faithful customers to the iHealth Pharmacy. While tons of fake drugs were recovered at the premises of the pharmacy yesterday, all efforts to reach the owner of the popular pharmacy has proved abortive…
+                    </p>
+                    <div class="info">
+                        <span class="time">05/16/2021</span>
+                        <span class="author">By Lucy Hiddleston  |  4min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+
+           
+                
+       
+          
+            </div>
+           
+        </div>
+
+        
+    </main>
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ACA Portal NG</title>
+        <link rel="stylesheet" href="css/theme.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/icons.css">
+        <script src="js/main.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        p {
+  text-align: left;
+  padding-top: 1em;
+}
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+   prefixes courtesy of autoprefixer
+   */
+ul.social-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+}
+ul.social-set li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+/* Font Awesome icons */
+a.sociali {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  padding: 10px;
+  /* background: #accfc0; */
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 10px !important;
+  padding-bottom: 10px !important;
+}
+a.sociali:hover, a.sociali:focus {
+    color: #010066;
+  background: #f8f7fffa;
+}
+
+        </style>
+    </head>
+    <body>
+        <footer class="bg-dark-blue">
+            <div class="sections">
+                <div>
+                    <h5>Home</h5>
+                    <a href="http://cddwestafrica.org/"  target="_blank">cddwestafrica.org</a>
+                    <section class="">
+                        <ul class="social-set">
+                            <li><a class="sociali" href="#" target="_blank" aria-label="Twitter">
+                              <i class="fa fa-twitter fa-fw" title="Twitter"></i></a></li>
+                            <li><a class="sociali" href="#" target="_blank" aria-label="YouTube">
+                              <i class="fa fa-youtube fa-fw" title="YouTube"></i></a></li>
+                            <li><a class="sociali" href="#" target="_blank" aria-label="Instagram">
+                              <i class="fa fa-instagram fa-fw" title="Instagram"></i></a></li>
+                            <li><a class="sociali" href="#" target="_blank" aria-label="Facebook">
+                              <i class="fa fa-facebook-square fa-fw" title="Facebook"></i></a></li>
+
+
+                    </ul>
+                </section>
+
+                </div>
+                <div>
+                    <div>
+                        <h5>About</h5>
+                        <a href="./about.html#CDD">CDD</a>
+                        <a href="./about.html#MacArthur Foundation">MacArthur Foundation </a>
+                        <a href="./about.html#EFCC">EFCC </a>
+                        <a href="./about.html#ICPC">ICPC </a>
+                        <a href="./about.html#NFIU">NFIU </a>
+                        <a href="./about.html#OAuGF">OAuGF </a>
+                        <a href="./about.html#TUGAR">TUGAR </a>
+                        <a href="./about.html#PACAC">PACAC </a>
+                    </div>
+                    <div>
+                        <h5>Resources</h5>
+                        <a href="./resources.html">Publications</a>
+                        <a href="./resources.html">Gallery</a>
+                        <a href="./resources.html">Videos</a>
+                    </div>
+                    <div>
+                        <h5>Infographics</h5>
+                        <a href="./infographics.html">All infographics</a>
+                        <a href="./infographics.html">Governance </a>
+                        <a href="./infographics.html">Convictions & Recovery </a>
+                        <a href="./infographics.html">Citizens </a>
+                        <a href="./infographics.html">Agencies  </a>
+                    </div>
+                    <!-- <div>
+                        <h5>Projects</h5>
+                        <a href="./resources.html">Past projects</a>
+                        <a href="./resources.html">Present Project</a>
+                        <a href="./resources.html">Duis aliquam</a>
+                        <a href="./resources.html">Duis aliquam</a>
+                        <a href="./resources.html">Duis aliquam</a>
+                    </div> -->
+                    <div>
+                        <h5>News & Events</h5>
+                        <a href="./resources.html"> News & Events </a>
+                        <a href="./resources.html">Trending</a>
+                        <a href="./resources.html">Breaking News </a>
+                        <a href="./resources.html">Previous Posts </a>
+                        <a href="./resources.html">Upcoming Events</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="foot">
+                <img src="img/footer-logo.png" alt="">
+                <p>2021 CDDWestAfrica inc. All rights reserved.</p>
+            </div>
+        </footer> 
+    </body>
+</html>
+
+</body>
+
+</html>
+

@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    
+
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="icons.css">
+<script src="main.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+ <style>
+    html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{page2::tile}}</title>
+        
+
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="icons.css">
+<script src="main.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+<style> 
+/* search box  */
+    
+    .searchBox {
+        /* position: absolute; */
+        /* top: 50%;
+        left: 50%; */
+        /* transform: translate(-50%,-50%); */
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .searchBox input{
+        background-color: #2a30dc;
+        border: none;
+        outline: none;
+        width: 0;
+        padding: 0; 
+        opacity: 0;
+        border-radius: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        color: #fff;
+        transition: all 1s;
+    }
+    
+    .searchBox input::placeholder {
+        color: white;
+        font-weight: 400;
+    }
+    
+    .searchBox:hover input{
+        width: 240px;
+        opacity: 1;
+        padding: 10px 20px;
+
+    }
+    
+    .searchBox:hover i{
+        color: #fff;
+        display: hidden;
+    }
+
+    /* search box ended */
+    
+
+    /* search functionalities */
+
+/* #myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 12px;
+  border: none;
+} */
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL div a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL div a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+       .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f8f7fffa; 
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+
+
+
+/*  */
+
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f8f7fffa;
+  background-color: #f8f7fffa;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 9px;
+  text-decoration: none;
+  font-size: 39px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.mobileshow { 
+display:none; 
+}
+@media screen and (max-width: 500px) {
+.mobileshow { 
+display:block; }
+}
+
+
+        </style> 
+    </head>
+    <body>
+
+
+
+        
+        
+        <nav>
+            
+            <div class="menu">
+                <div class="dropdown item">
+                    <!-- <span>Mouse over me</span> -->
+                    <a href="./about.html" data-action="dropdown" data-target="resources" ><b>About Us</b><i class="fa fa-angle-down"></i></a>
+                 
+                    <div class="dropdown-content">
+                    <!-- <p>Hello World!</p> -->
+                    <div class="dropdown" id="resources">
+                        <ul class="menu">
+                            <li>
+                                <a href="./about.html#CDD" class="item"><h5>CDD</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#MacArthur Foundation"><h5>MacArthur Foundation</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#EFCC"><h5>EFCC</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#ICPC"><h5>ICPC</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#NFIU"><h5>NFIU</h5></a>
+                            </li>
+                            
+                            <li>
+                                <a href="./about.html#OAuGF"><h5>OAuGF</h5></a>
+                            </li>
+                            
+                            <li>
+                                <a href="./about.html#TUGAR"><h5>TUGAR</h5></a>
+                            </li>
+                            
+                            <li>
+                                <a href="./about.html#PACAC"><h5>PACAC</h5></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    </div>
+                  </div>
+                
+
+                <!-- <a class="item" href="./about.html">About Us</a> -->
+
+                <div class="dropdown item">
+                    <!-- <span>Mouse over me</span> -->
+                    <a href="./resources.html" data-action="dropdown" data-target="resources" ><b>Resources</b><i class="fa fa-angle-down"></i></a>
+                 
+                    <div class="dropdown-content">
+                    <!-- <p>Hello World!</p> -->
+                    <div class="dropdown" id="resources">
+                        <ul class="menu">
+                            <li>
+                                <a href="./resources.html"><h5>Publications</h5></a>
+                            </li>
+                            <li>
+                                <a href="./resources.html"><h5>Gallery</h5></a>
+                            </li>
+                            <li>
+                                <a href="./resources.html"><h5>Videos</h5></a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                  </div>
+                  
+                  <div class="dropdown item">
+                    <!-- <span>Mouse over me</span> -->
+                    <a href="./infographics.html" data-action="dropdown" data-target="resources" ><b>Infographics</b><i class="fa fa-angle-down"></i></a>
+                 
+                    <div class="dropdown-content">
+                    <!-- <p>Hello World!</p> -->
+                    <div class="dropdown" id="infographics">
+                        <ul class="menu">
+                            <li>
+                                <a href="./infographics.html"><h5>Governance</h5></a>
+                            </li>
+                            <li>
+                                <a href="./infographics.html"><h5>Convictions & Recovery</h5></a>
+                            </li>
+                            <li>
+                                <a href="./infographics.html"><h5>Citizens</h5></a>
+                            </li>
+                            <li>
+                                <a href="./infographics.html"><h5>Agencies</h5></a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                  </div>
+                
+                
+                </div>
+            </div>
+            <div class="logo">
+                <a class="item" href="./">   <img src="../img/agency4.png" alt="agency4" class="partner"></a>
+                <a class="item" href="./">   <img src="../img/agency6.png" alt="agency6" class="partner"></a>
+                <a class="item" href="./">  <img src="../img/agency5.png" alt="agency5" class="partner"></a>
+                <a class="item" href="./"> <img src="../img/logo.svg" alt="Logo"></a>
+                <a class="item" href="./"> <img src="../img/agency1.png" alt="agency1" class="partner"></a>
+                <a class="item" href="./"> <img src="../img/agency2.png" alt="agency2" class="partner"></a>
+                <a class="item" href="./"> <img src="../img/agency3.png" alt="agency3" class="partner"></a>
+            </div>
+            <div class="menu">
+                <a class="item" href="./blog.html"><b>News & Events</b></a>
+                <a class="item" href="https://app.acaportal.ng/login"><b>Log In</b></a>
+                <a href="https://app.acaportal.ng/register">
+                    <button class="item btn nav blue"><b> Sign Up</b></button>
+                </a>
+                <div class="searchBox">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                    
+                    <i class="icon-search txt-primary"></i>
+                </div>
+               
+            </div>
+            
+            <!-- <i class="icon-menu" data-target="foldable-menu" data-toggle="open"></i> -->
+
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   
+
+    
+    <div class="dropdown item">
+        <!-- <span>Mouse over me</span> -->
+        <a href="#" data-action="dropdown" data-target="resources" style="color: #2a30dc;"><b>About us</b><i class="fa fa-angle-down"></i></a>
+     
+        <div class="dropdown-content">
+        <!-- <p>Hello World!</p> -->
+        <div class="dropdown" id="resources">
+            <ul class="menu">
+                <li>
+                    <a href="./about.html#CDD" class="item"><h5>CDD</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#MacArthur Foundation"><h5>MacArthur Foundation</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#EFCC"><h5>EFCC</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#ICPC"><h5>ICPC</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#NFIU"><h5>NFIU</h5></a>
+                </li>
+                
+                <li>
+                    <a href="./about.html#OAuGF"><h5>OAuGF</h5></a>
+                </li>
+                
+                <li>
+                    <a href="./about.html#TUGAR"><h5>TUGAR</h5></a>
+                </li>
+                
+                <li>
+                    <a href="./about.html#PACAC"><h5>PACAC</h5></a>
+                </li>
+                
+            </ul>
+        </div>
+        </div>
+      </div>
+
+          <div class="dropdown item">
+            <!-- <span>Mouse over me</span> -->
+            <a href="#" data-action="dropdown" data-target="resources" style="color: #2a30dc;"><b>Resources</b><i class="fa fa-angle-down"></i></a>
+         
+            <div class="dropdown-content">
+            <!-- <p>Hello World!</p> -->
+            <div class="dropdown" id="resources">
+                <ul class="menu">
+                    <li>
+                        <a href="./resources.html"><h5>Publications</h5></a>
+                    </li>
+                    <li>
+                        <a href="./resources.html"><h5>Gallery</h5></a>
+                    </li>
+                    <li>
+                        <a href="./resources.html"><h5>Videos</h5></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+          </div>
+
+
+          
+          <div class="dropdown item">
+            <!-- <span>Mouse over me</span> -->
+            <a href="#" data-action="dropdown" data-target="resources" style="color: #2a30dc;"><b>Infographics</b><i class="fa fa-angle-down"></i></a>
+         
+            <div class="dropdown-content">
+            <!-- <p>Hello World!</p> -->
+            <div class="dropdown" id="infographics">
+                <ul class="menu">
+                    <li>
+                        <a href="./infographics.html"><h5>Governance</h5></a>
+                    </li>
+                    <li>
+                        <a href="./infographics.html"><h5>Convictions & Recovery</h5></a>
+                    </li>
+                    <li>
+                        <a href="./infographics.html"><h5>Citizens</h5></a>
+                    </li>
+                    <li>
+                        <a href="./infographics.html"><h5>Agencies</h5></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+          </div>
+
+
+
+
+          <a class="item" href="./blog.html" style="color: #2a30dc;"><b>News & Events</b></a>
+          <a class="item" href="https://app.acaportal.ng/login" style="color: #2a30dc;"><b>Log In</b></a>
+          <a href="https://app.acaportal.ng/register">
+            <button class="item btn small nav blue"><b> Sign Up</b></button>
+        </a>
+        
+          
+          
+    </div>
+  </div>
+  <span style="font-size:30px;cursor:pointer" class="mobileshow" onclick="openNav()">&#9776;</span>
+      
+        </nav>
+
+<!-- search scripts -->
+        
+<script>
+    function myFunction() {
+        var input, filter, ul, div, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        div = ul.getElementsByTagName("div");
+        for (i = 0; i < div.length; i++) {
+            a = div[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                div[i].style.display = "";
+            } else {
+                div[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+
+
+
+        <script>
+            function openNav() {
+              document.getElementById("myNav").style.width = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("myNav").style.width = "0%";
+            }
+            </script>
+            
+    </body>
+</html>
+        <main>
+            <div class="hero small" style="background-image: url(img/partners-bg.png); background-position: bottom;">
+                <div class="container no-controls">
+                    <div class="page-info">
+                        <h3 class="txt-primary txt-center m-0">About Us</h3>
+                        <p class="txt-black txt-center m-0">We are an organization that seeks to enable sustainable development and democracy in Nigeria by combating corruption through collaborative engagements with ACAs</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Chat Widgets Starts Here-->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/608ce49462662a09efc3da99/1f4j5ppuk';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+
+
+            <!--Chat Widgets Ends Here-->
+<!--            
+        <div class="chat-bot">
+            <div class="dropdown" id="chat">
+                <div class="content">
+                    <p>Fatima Saidu from CDD</p>
+                    <h6>Welcome to CDD</h6>
+                    <input type="text" name="" id="" placeholder="How can we help you ... ">
+                </div>
+                <div class="footer">
+                    <button class="btn light-green">Call Us</button>
+                    <button class="btn light-green">Email Us</button>
+                </div>
+            </div>
+            <div class="chat-btn flex-center rounded btn green" data-action="dropdown" data-target="chat">
+                <i class="icon-chat"></i>
+            </div>
+        </div> -->
+        <div class="section about" id="CDD">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency8.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4 >CDD</h4>
+                            <p class="txt-blue" >Centre for Democracy and Development</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Centre for Democracy and Development</strong> 
+                        The Centre for Democracy and Development was established to mobilize global opinion and resources for democratic development and provide an independent space to reflect critically on the challenges posed to the democratization and development processes in West Africa, and also to provide alternatives and best practices to the sustenance of democracy and development in the region. CDD envisions a West Africa that is democratically governed, economically integrated – promoting human security and people-centered development. The mission of the centre is to be the prime catalyst and facilitator for strategic analysis and capacity building for sustainable democracy and development in the West African sub-region
+                    </p>
+                    <!-- <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        
+                        Why do we use it?
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        
+                        
+                        Where does it come from?
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        
+                        Where can I get some?
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        
+                        5
+                            paragraphs
+                            words
+                            bytes
+                            lists
+                            Start with 'Lorem
+                        ipsum dolor sit amet...'
+                        </p> -->
+                </div>
+            </div>
+        </div>
+        <div class="section about" id="MacArthur Foundation">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency7.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4 >MacArthur Foundation</h4>
+                            <p class="txt-blue" >MacArthur Foundation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>MacArthur Foundation</strong> 
+                        The John D. and Catherine T. MacArthur Foundation supports creative people, effective institutions and influential networks; building a more just, verdant and peaceful world. MacArthur is placing a few big bets that truly significant progress is possible on some of the world’s most pressing social challenges, including advancing global climate solutions, decreasing nuclear risk, promoting local justice reform in the U.S., and reducing corruption in Africa’s most populous country, Nigeria. In addition to the MacArthur Fellows Program and the global 100&amp;Change competition, the Foundation continues its historic commitments to the role of journalism in a responsive democracy as well as the vitality of our headquarters city, Chicago
+                    </p>
+                    <!-- <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        
+                        Why do we use it?
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        
+                        
+                        Where does it come from?
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        
+                        Where can I get some?
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        
+                        5
+                            paragraphs
+                            words
+                            bytes
+                            lists
+                            Start with 'Lorem
+                        ipsum dolor sit amet...'
+                        </p> -->
+                </div>
+            </div>
+        </div>
+        <div class="section about" id="EFCC">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency1.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4 >EFCC</h4>
+                            <p class="txt-blue" >Economic and Financial Crimes Commission</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Economic and Financial Crimes Commission</strong> 
+                        The preponderance of economic and financial crimes like Advance Fee Fraud (419), Money Laundering and others, have had severe negative consequences on Nigeria which include decreasing of Foreign Direct Investments in the country and tainting of Nigeria&#39;s national image. The menace of these crimes and the recognition of the magnitude and gravity of the situation led to the establishment of the Economic and Financial Crimes Commission (EFCC). The legal instrument backing the Commission is the attached EFCC (Establishment) Act 2002. The Commission also has high-Ievel support from the Presidency, the Legislature and key security and law enforcement agencies in Nigeria
+                    </p>
+                    <!-- <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        
+                        Why do we use it?
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        
+                        
+                        Where does it come from?
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        
+                        Where can I get some?
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        
+                        5
+                            paragraphs
+                            words
+                            bytes
+                            lists
+                            Start with 'Lorem
+                        ipsum dolor sit amet...'
+                        </p> -->
+                </div>
+            </div>
+        </div>
+        <div class="section about" id="ICPC">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/ICPC.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4 >ICPC</h4>
+                            <p class="txt-blue" >Independent Corrupt Practices &amp; Other Related Offences Commission</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Independent Corrupt Practices &amp; Other Related Offences Commission</strong> 
+                        The Independent Corrupt Practices and Other Related Offences Commission (ICPC) was inaugurated on September 29th, 2000 by the former Nigerian President, Chief Olusegun Obasanjo, GCFR. The Commission is at the hub of Nigeria&#39;s fight against corruption. In the order set out at section 6 of the Act 2000, the first duty of the Commission is to receive complaints, investigate and prosecute offenders. Other duties include reviewing and modifying the systems and procedures of public bodies as well as education of the public and fostering their support in combating corruption. The Commission brought a fresh and decisive perspective to the fight against corruption in the form of a holistic approach encompassing enforcement, prevention and educational measures. It captures in a single document, a host of corrupt offences in their old and sophisticated guises and is also set up with wide-ranging powers. The Act brings under its purview all Nigerians, in the private and public sectors and even those public officers with constitutional immunity
+                    </p>
+                    <!-- <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        
+                        Why do we use it?
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        
+                        
+                        Where does it come from?
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        
+                        Where can I get some?
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        
+                        5
+                            paragraphs
+                            words
+                            bytes
+                            lists
+                            Start with 'Lorem
+                        ipsum dolor sit amet...'
+                        </p> -->
+                </div>
+            </div>
+        </div>
+        <div class="section about" id="NFIU">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency3.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4 >NFIU</h4>
+                            <p class="txt-blue" >Nigerian Financial Intelligence Unit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Nigerian Financial Intelligence Unit</strong> 
+                        The Nigerian Financial Intelligence Unit (NFIU) is the central national agency responsible for the receipt of disclosures from reporting organizations. The agency analyses these disclosures and ensures the production of intelligence for dissemination to competent authorities. The NFIU is an autonomous unit, domiciled within the Central Bank of Nigeria and is also the central coordinating body for the country’s Anti-Money Laundering, Counter-Terrorist Financing and Counter-Proliferation Financing (AML/CFT/CPF) framework
+                    </p>
+                    <!-- <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        
+                        Why do we use it?
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        
+                        
+                        Where does it come from?
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        
+                        Where can I get some?
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        
+                        5
+                            paragraphs
+                            words
+                            bytes
+                            lists
+                            Start with 'Lorem
+                        ipsum dolor sit amet...'
+                        </p> -->
+                </div>
+            </div>
+        </div>
+        <div class="section about" id="OAuGF">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency4.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4 >OAuGF</h4>
+                            <p class="txt-blue" >Office of the Auditor-General for the Federation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Office of the Auditor-General for the Federation</strong> 
+                        The Office of the Auditor-General for the Federation is a separate and independent entity whose existence, powers, duties and responsibilities are provided for under section 85 of the Constitution of the Federal Republic of Nigeria 1999.  Section 85(2) of the Constitution of the Federation Republic of Nigeria 1999, provides that the Public Accounts of the Federation and of all Offices and Courts of the Federation shall be audited and reported on by the Auditor-General who shall submit his report to the National Assembly; and for that purpose, the Auditor-General or any person authorized by him in that regard shall have access to all the books, records, returns and other documents relating to those accounts. Similarly, section 85(4) of the Constitution stipulate that the Auditor-General shall have power to conduct Periodic Checks on all Government statutory corporations, commissions, authorities and agencies, including all persons and bodies established by an Act of the National Assembly. Furthermore, Section 301 vests the Auditor-General of the Federation with the power to audit the account of Area Councils in the Federal Capital Territory
+                    </p>
+                    <!-- <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        
+                        Why do we use it?
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        
+                        
+                        Where does it come from?
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        
+                        Where can I get some?
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        
+                        5
+                            paragraphs
+                            words
+                            bytes
+                            lists
+                            Start with 'Lorem
+                        ipsum dolor sit amet...'
+                        </p> -->
+                </div>
+            </div>
+        </div>
+        <div class="section about" id="TUGAR">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency6.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4 >TUGAR</h4>
+                            <p class="txt-blue" >Technical Unit on Governance &amp; Anti-Corruption Reforms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Technical Unit on Governance &amp; Anti-Corruption Reforms</strong> 
+                        The major role of the Technical Unit on Governance &amp; Anti-Corruption Reforms (TUGAR) is to serve as a one-stop shop for data, information, policy and diagnostic reports from analysis, surveys and other research methods for monitoring and evaluating anti-corruption and governance initiatives across all sectors in the country. The enabling laws of other anti-corruption agencies such as the EFCC, ICPC,NEITI,CCB gives TUGAR the power to conduct research and evaluations across all agencies as well as other sectors of the economy. TUGAR’s activities aim at building synergy with other agencies while providing a strong link with activities of non-state actors as well
+                    </p>
+                    <!-- <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        
+                        Why do we use it?
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        
+                        
+                        Where does it come from?
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        
+                        Where can I get some?
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        
+                        5
+                            paragraphs
+                            words
+                            bytes
+                            lists
+                            Start with 'Lorem
+                        ipsum dolor sit amet...'
+                        </p> -->
+                </div>
+            </div>
+        </div>
+        <div class="section about" id="PACAC">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency5.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4 >PACAC</h4>
+                            <p class="txt-blue" >Presidential Advisory Committee Against Corruption</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Presidential Advisory Committee Against Corruption</strong> 
+                        President Muhammadu Buhari, GCFR, as part of the anti-corruption fight of the government, constituted the Presidential Advisory Committee Against Corruption (PACAC) in August 2015. It was the very first committee he set up after he was sworn into office on May 29th, 2015. PACAC commenced work on August 10, 2015 with the mandate to, inter alia – promote the reform agenda of the government on anti-corruption efforts, to advise the present administration on the prosecution of the war against corruption and the implementation of required reforms in Nigeria’s criminal justice system. A 7-member Technical Committee supports the PACAC
+                    </p>
+                    <!-- <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        
+                        Why do we use it?
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        
+                        
+                        Where does it come from?
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        
+                        Where can I get some?
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        
+                        5
+                            paragraphs
+                            words
+                            bytes
+                            lists
+                            Start with 'Lorem
+                        ipsum dolor sit amet...'
+                        </p> -->
+                </div>
+            </div>
+        </div>
+     <!-- <div class="section about">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency2.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4>ICPC</h4>
+                            <p class="txt-blue">Economic and Financial Crimes Commission</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Economic and Financial Crimes Commission.</strong> Laborum magna nulla duis ullamco
+                        cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim temp or enim.
+                        Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.
+                        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate
+                        exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                        sint deserunt ut voluptate aute id deserunt nisi.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section about">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency2.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4>ICPC</h4>
+                            <p class="txt-blue">Economic and Financial Crimes Commission</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Economic and Financial Crimes Commission.</strong> Laborum magna nulla duis ullamco
+                        cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim temp or enim.
+                        Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.
+                        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate
+                        exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                        sint deserunt ut voluptate aute id deserunt nisi.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section about">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency2.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4>ICPC</h4>
+                            <p class="txt-blue">Economic and Financial Crimes Commission</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Economic and Financial Crimes Commission.</strong> Laborum magna nulla duis ullamco
+                        cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim temp or enim.
+                        Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.
+                        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate
+                        exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                        sint deserunt ut voluptate aute id deserunt nisi.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section about">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency2.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4>ICPC</h4>
+                            <p class="txt-blue">Economic and Financial Crimes Commission</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Economic and Financial Crimes Commission.</strong> Laborum magna nulla duis ullamco
+                        cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim temp or enim.
+                        Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.
+                        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate
+                        exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                        sint deserunt ut voluptate aute id deserunt nisi.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section about">
+            <div class="card no-shadow">
+                <div class="card bg-shadow">
+                    <div class="card it m-0">
+                        <div class="img">
+                            <img src="img/agency2.png" alt="">
+                        </div>
+                        <div class="text txt-center">
+                            <h4>ICPC</h4>
+                            <p class="txt-blue">Economic and Financial Crimes Commission</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Economic and Financial Crimes Commission.</strong> Laborum magna nulla duis ullamco
+                        cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim temp or enim.
+                        Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.
+                        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate
+                        exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                        sint deserunt ut voluptate aute id deserunt nisi.
+                    </p>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="section auto-height flex-center pad-4">
+            <div class="card it">
+                <div class="img">
+                    <img src="img/agency0.png" alt="">
+                </div>
+                <div class="text txt-center">
+                    <h4>Others</h4>
+                    <p class="txt-blue">See Other Agencies We Are Partnering With</p>
+                    <button class="btn small blue">Learn more</button>
+                </div>
+            </div>
+        </div> -->
+    </main>
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{page2::tile}}</title>
+        <link rel="stylesheet" href="css/theme.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/icons.css">
+        <script src="js/main.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        p {
+  text-align: left;
+  padding-top: 1em;
+}
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+   prefixes courtesy of autoprefixer
+   */
+ul.social-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+}
+ul.social-set li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+/* Font Awesome icons */
+a.sociali {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  padding: 10px;
+  /* background: #accfc0; */
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 10px !important;
+  padding-bottom: 10px !important;
+}
+a.sociali:hover, a.sociali:focus {
+    color: #010066;
+  background: #f8f7fffa;
+}
+
+        </style>
+    </head>
+    <body>
+        <footer class="bg-dark-blue">
+            <div class="sections">
+                <div>
+                    <h5>Home</h5>
+                    <a href="http://cddwestafrica.org/"  target="_blank">cddwestafrica.org</a>
+                    <section class="">
+                        <ul class="social-set">
+                            <li><a class="sociali" href="#" target="_blank" aria-label="Twitter">
+                              <i class="fa fa-twitter fa-fw" title="Twitter"></i></a></li>
+                            <li><a class="sociali" href="#" target="_blank" aria-label="YouTube">
+                              <i class="fa fa-youtube fa-fw" title="YouTube"></i></a></li>
+                            <li><a class="sociali" href="#" target="_blank" aria-label="Instagram">
+                              <i class="fa fa-instagram fa-fw" title="Instagram"></i></a></li>
+                            <li><a class="sociali" href="#" target="_blank" aria-label="Facebook">
+                              <i class="fa fa-facebook-square fa-fw" title="Facebook"></i></a></li>
+
+
+                    </ul>
+                </section>
+
+                </div>
+                <div>
+                    <div>
+                        <h5>About</h5>
+                        <a href="./about.html#CDD">CDD</a>
+                        <a href="./about.html#MacArthur Foundation">MacArthur Foundation </a>
+                        <a href="./about.html#EFCC">EFCC </a>
+                        <a href="./about.html#ICPC">ICPC </a>
+                        <a href="./about.html#NFIU">NFIU </a>
+                        <a href="./about.html#OAuGF">OAuGF </a>
+                        <a href="./about.html#TUGAR">TUGAR </a>
+                        <a href="./about.html#PACAC">PACAC </a>
+                    </div>
+                    <div>
+                        <h5>Resources</h5>
+                        <a href="./resources.html">Publications</a>
+                        <a href="./resources.html">Gallery</a>
+                        <a href="./resources.html">Videos</a>
+                    </div>
+                    <div>
+                        <h5>Infographics</h5>
+                        <a href="./infographics.html">All infographics</a>
+                        <a href="./infographics.html">Governance </a>
+                        <a href="./infographics.html">Convictions & Recovery </a>
+                        <a href="./infographics.html">Citizens </a>
+                        <a href="./infographics.html">Agencies  </a>
+                    </div>
+                    <!-- <div>
+                        <h5>Projects</h5>
+                        <a href="./resources.html">Past projects</a>
+                        <a href="./resources.html">Present Project</a>
+                        <a href="./resources.html">Duis aliquam</a>
+                        <a href="./resources.html">Duis aliquam</a>
+                        <a href="./resources.html">Duis aliquam</a>
+                    </div> -->
+                    <div>
+                        <h5>News & Events</h5>
+                        <a href="./resources.html"> News & Events </a>
+                        <a href="./resources.html">Trending</a>
+                        <a href="./resources.html">Breaking News </a>
+                        <a href="./resources.html">Previous Posts </a>
+                        <a href="./resources.html">Upcoming Events</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="foot">
+                <img src="img/footer-logo.png" alt="">
+                <p>2021 CDDWestAfrica inc. All rights reserved.</p>
+            </div>
+        </footer> 
+    </body>
+</html>
+
+</body>
+
+</html>
+

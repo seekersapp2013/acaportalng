@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographics</title>
+    
+
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="icons.css">
+<script src="main.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <style>
+        button[data-filter="Governance"]:focus ~ div:not([class*="Governance"]) {
+         display:none;
+       }
+       
+       button[data-filter="Convictions & Recovery"]:focus ~ div:not([class*="Convictions & Recovery"]) {
+         display:none;
+       }
+       
+       button[data-filter="Citizens & Agencies"]:focus ~ div:not([class*="Citizens & Agencies"]) {
+         display:none;
+       }
+       
+       button[data-filter="Citizens"]:focus ~ div:not([class*="Citizens"]) {
+         display:none;
+       }
+       
+       button[data-filter="Agencies"]:focus ~ div:not([class*="Agencies"]) {
+         display:none;
+       }
+       .margin{
+           margin-left: 40px;
+       }
+       </style>
+       
+
+       <!-- Pagination style -->
+<style>
+    a{
+  text-decoration: none;
+}
+.physicianModal .info p, .physicianModal .info .text-info{margin: 0;}
+.showBioBtn{
+    
+  border-radius: 64em;
+  padding: 0.4em 1em;
+  font-size: 0.75em;
+  font-weight: 300;
+    background-color: #337ab7; padding: 5px 10px; color: #fff; font-size: 12px;}
+
+/*Pagination CSS*/
+#page_navigation {
+  clear:both;
+  margin: 20px 0;
+  text-align: center;
+}
+.next_link{
+    background-color: #10bf2b;
+    color: white !important;
+
+}
+#page_navigation a{
+  border-radius: 64em;
+  padding: 0.4em 1em;
+  font-size: bold;
+  font-weight: 300;
+  color: #323C47;
+  
+  
+}
+.active_page{
+    background:#002684;
+    color:white !important;
+}
+</style>
+    
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ACA Portal NG</title>
+        
+
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="icons.css">
+<script src="main.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+<style> 
+/* search box  */
+    
+    .searchBox {
+        /* position: absolute; */
+        /* top: 50%;
+        left: 50%; */
+        /* transform: translate(-50%,-50%); */
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .searchBox input{
+        background-color: #2a30dc;
+        border: none;
+        outline: none;
+        width: 0;
+        padding: 0; 
+        opacity: 0;
+        border-radius: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        color: #fff;
+        transition: all 1s;
+    }
+    
+    .searchBox input::placeholder {
+        color: white;
+        font-weight: 400;
+    }
+    
+    .searchBox:hover input{
+        width: 240px;
+        opacity: 1;
+        padding: 10px 20px;
+
+    }
+    
+    .searchBox:hover i{
+        color: #fff;
+        display: hidden;
+    }
+
+    /* search box ended */
+    
+
+    /* search functionalities */
+
+/* #myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 12px;
+  border: none;
+} */
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL div a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL div a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+       .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f8f7fffa; 
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+
+
+
+/*  */
+
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f8f7fffa;
+  background-color: #f8f7fffa;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 9px;
+  text-decoration: none;
+  font-size: 39px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.mobileshow { 
+display:none; 
+}
+@media screen and (max-width: 500px) {
+.mobileshow { 
+display:block; }
+}
+
+
+        </style> 
+    </head>
+    <body>
+
+
+
+        
+        
+        <nav>
+            
+            <div class="menu">
+                <div class="dropdown item">
+                    <!-- <span>Mouse over me</span> -->
+                    <a href="./about.html" data-action="dropdown" data-target="resources" ><b>About Us</b><i class="fa fa-angle-down"></i></a>
+                 
+                    <div class="dropdown-content">
+                    <!-- <p>Hello World!</p> -->
+                    <div class="dropdown" id="resources">
+                        <ul class="menu">
+                            <li>
+                                <a href="./about.html#CDD" class="item"><h5>CDD</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#MacArthur Foundation"><h5>MacArthur Foundation</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#EFCC"><h5>EFCC</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#ICPC"><h5>ICPC</h5></a>
+                            </li>
+                            <li>
+                                <a href="./about.html#NFIU"><h5>NFIU</h5></a>
+                            </li>
+                            
+                            <li>
+                                <a href="./about.html#OAuGF"><h5>OAuGF</h5></a>
+                            </li>
+                            
+                            <li>
+                                <a href="./about.html#TUGAR"><h5>TUGAR</h5></a>
+                            </li>
+                            
+                            <li>
+                                <a href="./about.html#PACAC"><h5>PACAC</h5></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    </div>
+                  </div>
+                
+
+                <!-- <a class="item" href="./about.html">About Us</a> -->
+
+                <div class="dropdown item">
+                    <!-- <span>Mouse over me</span> -->
+                    <a href="./resources.html" data-action="dropdown" data-target="resources" ><b>Resources</b><i class="fa fa-angle-down"></i></a>
+                 
+                    <div class="dropdown-content">
+                    <!-- <p>Hello World!</p> -->
+                    <div class="dropdown" id="resources">
+                        <ul class="menu">
+                            <li>
+                                <a href="./resources.html"><h5>Publications</h5></a>
+                            </li>
+                            <li>
+                                <a href="./resources.html"><h5>Gallery</h5></a>
+                            </li>
+                            <li>
+                                <a href="./resources.html"><h5>Videos</h5></a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                  </div>
+                  
+                  <div class="dropdown item">
+                    <!-- <span>Mouse over me</span> -->
+                    <a href="./infographics.html" data-action="dropdown" data-target="resources" ><b>Infographics</b><i class="fa fa-angle-down"></i></a>
+                 
+                    <div class="dropdown-content">
+                    <!-- <p>Hello World!</p> -->
+                    <div class="dropdown" id="infographics">
+                        <ul class="menu">
+                            <li>
+                                <a href="./infographics.html"><h5>Governance</h5></a>
+                            </li>
+                            <li>
+                                <a href="./infographics.html"><h5>Convictions & Recovery</h5></a>
+                            </li>
+                            <li>
+                                <a href="./infographics.html"><h5>Citizens</h5></a>
+                            </li>
+                            <li>
+                                <a href="./infographics.html"><h5>Agencies</h5></a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                  </div>
+                
+                
+                </div>
+            </div>
+            <div class="logo">
+                <a class="item" href="./">   <img src="../img/agency4.png" alt="agency4" class="partner"></a>
+                <a class="item" href="./">   <img src="../img/agency6.png" alt="agency6" class="partner"></a>
+                <a class="item" href="./">  <img src="../img/agency5.png" alt="agency5" class="partner"></a>
+                <a class="item" href="./"> <img src="../img/logo.svg" alt="Logo"></a>
+                <a class="item" href="./"> <img src="../img/agency1.png" alt="agency1" class="partner"></a>
+                <a class="item" href="./"> <img src="../img/agency2.png" alt="agency2" class="partner"></a>
+                <a class="item" href="./"> <img src="../img/agency3.png" alt="agency3" class="partner"></a>
+            </div>
+            <div class="menu">
+                <a class="item" href="./blog.html"><b>News & Events</b></a>
+                <a class="item" href="https://app.acaportal.ng/login"><b>Log In</b></a>
+                <a href="https://app.acaportal.ng/register">
+                    <button class="item btn nav blue"><b> Sign Up</b></button>
+                </a>
+                <div class="searchBox">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                    
+                    <i class="icon-search txt-primary"></i>
+                </div>
+               
+            </div>
+            
+            <!-- <i class="icon-menu" data-target="foldable-menu" data-toggle="open"></i> -->
+
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   
+
+    
+    <div class="dropdown item">
+        <!-- <span>Mouse over me</span> -->
+        <a href="#" data-action="dropdown" data-target="resources" style="color: #2a30dc;"><b>About us</b><i class="fa fa-angle-down"></i></a>
+     
+        <div class="dropdown-content">
+        <!-- <p>Hello World!</p> -->
+        <div class="dropdown" id="resources">
+            <ul class="menu">
+                <li>
+                    <a href="./about.html#CDD" class="item"><h5>CDD</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#MacArthur Foundation"><h5>MacArthur Foundation</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#EFCC"><h5>EFCC</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#ICPC"><h5>ICPC</h5></a>
+                </li>
+                <li>
+                    <a href="./about.html#NFIU"><h5>NFIU</h5></a>
+                </li>
+                
+                <li>
+                    <a href="./about.html#OAuGF"><h5>OAuGF</h5></a>
+                </li>
+                
+                <li>
+                    <a href="./about.html#TUGAR"><h5>TUGAR</h5></a>
+                </li>
+                
+                <li>
+                    <a href="./about.html#PACAC"><h5>PACAC</h5></a>
+                </li>
+                
+            </ul>
+        </div>
+        </div>
+      </div>
+
+          <div class="dropdown item">
+            <!-- <span>Mouse over me</span> -->
+            <a href="#" data-action="dropdown" data-target="resources" style="color: #2a30dc;"><b>Resources</b><i class="fa fa-angle-down"></i></a>
+         
+            <div class="dropdown-content">
+            <!-- <p>Hello World!</p> -->
+            <div class="dropdown" id="resources">
+                <ul class="menu">
+                    <li>
+                        <a href="./resources.html"><h5>Publications</h5></a>
+                    </li>
+                    <li>
+                        <a href="./resources.html"><h5>Gallery</h5></a>
+                    </li>
+                    <li>
+                        <a href="./resources.html"><h5>Videos</h5></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+          </div>
+
+
+          
+          <div class="dropdown item">
+            <!-- <span>Mouse over me</span> -->
+            <a href="#" data-action="dropdown" data-target="resources" style="color: #2a30dc;"><b>Infographics</b><i class="fa fa-angle-down"></i></a>
+         
+            <div class="dropdown-content">
+            <!-- <p>Hello World!</p> -->
+            <div class="dropdown" id="infographics">
+                <ul class="menu">
+                    <li>
+                        <a href="./infographics.html"><h5>Governance</h5></a>
+                    </li>
+                    <li>
+                        <a href="./infographics.html"><h5>Convictions & Recovery</h5></a>
+                    </li>
+                    <li>
+                        <a href="./infographics.html"><h5>Citizens</h5></a>
+                    </li>
+                    <li>
+                        <a href="./infographics.html"><h5>Agencies</h5></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+          </div>
+
+
+
+
+          <a class="item" href="./blog.html" style="color: #2a30dc;"><b>News & Events</b></a>
+          <a class="item" href="https://app.acaportal.ng/login" style="color: #2a30dc;"><b>Log In</b></a>
+          <a href="https://app.acaportal.ng/register">
+            <button class="item btn small nav blue"><b> Sign Up</b></button>
+        </a>
+        
+          
+          
+    </div>
+  </div>
+  <span style="font-size:30px;cursor:pointer" class="mobileshow" onclick="openNav()">&#9776;</span>
+      
+        </nav>
+
+<!-- search scripts -->
+        
+<script>
+    function myFunction() {
+        var input, filter, ul, div, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        div = ul.getElementsByTagName("div");
+        for (i = 0; i < div.length; i++) {
+            a = div[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                div[i].style.display = "";
+            } else {
+                div[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+
+
+
+        <script>
+            function openNav() {
+              document.getElementById("myNav").style.width = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("myNav").style.width = "0%";
+            }
+            </script>
+            
+    </body>
+</html>
+
+        <main>
+            <div class="hero small" data-jo="true"  style="background-image: url(img/Infographics.png); background-position: bottom;">
+                <div class="container no-controls">
+                    <div class="page-info">
+                        <h3 class="txt-primary txt-center m-0" data-jo="true" >Infographics</h3>
+                        <p class="txt-black txt-center m-0" data-jo="true" style="color: white;" >Find visual representation of reports and data</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Chat Widgets Starts Here-->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/608ce49462662a09efc3da99/1f4j5ppuk';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+<br />
+<br />
+
+<button class="filter-option item btn nav blue margin" data-filter="Governance" tabindex="-1">Governance</button> 
+    <button class="filter-option item btn nav blue" data-filter="Convictions & Recovery" tabindex="-1">Convictions & Recovery</button> 
+    <!-- <button class="filter-option item btn nav blue" data-filter="image" tabindex="-1">image</button>  -->
+    <button class="filter-option item btn nav blue" data-filter="Citizens" tabindex="-1">Citizens</button> 
+    <button class="filter-option item btn nav blue" data-filter="Agencies" tabindex="-1">Agencies</button> 
+    <button class="filter-option item btn nav blue" data-filter="*" tabindex="-1">All</button>
+    <div class="section auto-height infographics" data-jo="true" data-jo-content="repeated">
+
+
+<div class="physicianList">
+<input type='hidden' id='current_page' />
+<input type='hidden' id='show_per_page' />
+  <ul id="pagingBox">
+    <li>
+     
+        <div class="physicianBox">
+            <div class="content" data-jo="true" data-jo-content="repeated">
+                <div class="filteredList">
+    <div class="">
+    <div class="items">
+    <a href="/infographicsitems/152.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/01.png);"></div>
+        <div class="details"> 
+            <h5 class="">EFCC ACT</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/153.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/02.png);"></div>
+        <div class="details"> 
+            <h5 class="">ICPC ACT</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/154.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/03.png);"></div>
+        <div class="details"> 
+            <h5 class="">NFIU ACT</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/155.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/04.png);"></div>
+        <div class="details"> 
+            <h5 class="">Money Laundering Prohibition Act 2011</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/156.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/05.png);"></div>
+        <div class="details"> 
+            <h5 class="">Policy-Brief-On-TheImperative-Of-EffectiveEthics-Framework-InCombating-Corruption-InNigeria</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/157.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/06.png);"></div>
+        <div class="details"> 
+            <h5 class="">Report-of-Corruption-RiskAssessment-in-the-PortsSector; Report Of Gap And Compliance In Nigeria</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/158.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/07.png);"></div>
+        <div class="details"> 
+            <h5 class="">National Strategy Document (2018-2020)</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/159.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/08.png);"></div>
+        <div class="details"> 
+            <h5 class="">NFIU Guidance on Tax Evasion Indicators</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/160.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/09.png);"></div>
+        <div class="details"> 
+            <h5 class="">Money Laundering Indicators</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/167.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/17.png);"></div>
+        <div class="details"> 
+            <h5 class="">Summary of ICPC Enforcement Data from Inception to December 2017; (54) Guidelines for COVID-19 Procurement 2020</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/166.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/15.png);"></div>
+        <div class="details"> 
+            <h5 class="">ECOWAS protocol on the fight against corruption</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/165.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/14.png);"></div>
+        <div class="details"> 
+            <h5 class="">The African Union Convention on Preventing and Combating Corruption (AUCPCC)</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/164.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/13.png);"></div>
+        <div class="details"> 
+            <h5 class="">2020 Zonal Intervention Projects (Constituency Projects) LGAs and States</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/163.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/12.png);"></div>
+        <div class="details"> 
+            <h5 class="">Mutual Evaluation Report: Anti-Money Laundering and Combating the Financing of Terrorism</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/162.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/11.png);"></div>
+        <div class="details"> 
+            <h5 class="">Nigeria National Money Laundering &amp; Terrorist Financing Risk assessment</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/161.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/10.png);"></div>
+        <div class="details"> 
+            <h5 class="">NFIU Advisory on Potential ML/TF Risk Of Virtual Currency</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/168.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/17.png);"></div>
+        <div class="details"> 
+            <h5 class="">Record of funds and properties recovered from 2006 – April 2019</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/169.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/18.png);"></div>
+        <div class="details"> 
+            <h5 class="">Global Forum for Asset Recovery Progress report in Nigeria</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/170.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/19.png);"></div>
+        <div class="details"> 
+            <h5 class="">Aml-Cft-Compliance-Guidelines-For-Dnfis-1</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/172.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/21.png);"></div>
+        <div class="details"> 
+            <h5 class="">Info graphics on at least a few high profile cases completed at the Supreme Court or those in which huge assets were recovered through a Non-Conviction based procedure</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+    <a href="/infographicsitems/171.html" target="_blank">
+    <div class="card">
+        <div class="img" style="background-image: url(../img/info2/20.png);"></div>
+        <div class="details"> 
+            <h5 class="">What EFCC did with Recovered Loots(Including 3 Annexure for further details)</h5>
+            <p class="small txt-blue">05/31/2021 </p>
+        </div>
+    </div>
+</a>
+
+
+        </div>
+       
+    </div>
+
+
+
+
+                    
+                  </div>
+                
+    
+                
+    
+                
+            </div>
+                </div>
+        </li>
+    
+    <li>
+      <div class="physicianBox">
+        <div class="content" data-jo="true" data-jo-content="repeated">
+            <div class="filteredList">
+
+                <div class="">
+                    <div class="items">
+                    <a href="/infographicsitems/152.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/01.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">EFCC ACT</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/153.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/02.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">ICPC ACT</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/154.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/03.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">NFIU ACT</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/155.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/04.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Money Laundering Prohibition Act 2011</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/156.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/05.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Policy-Brief-On-TheImperative-Of-EffectiveEthics-Framework-InCombating-Corruption-InNigeria</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/157.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/06.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Report-of-Corruption-RiskAssessment-in-the-PortsSector; Report Of Gap And Compliance In Nigeria</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/158.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/07.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">National Strategy Document (2018-2020)</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/159.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/08.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">NFIU Guidance on Tax Evasion Indicators</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/160.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/09.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Money Laundering Indicators</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/167.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/17.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Summary of ICPC Enforcement Data from Inception to December 2017; (54) Guidelines for COVID-19 Procurement 2020</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/166.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/15.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">ECOWAS protocol on the fight against corruption</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/165.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/14.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">The African Union Convention on Preventing and Combating Corruption (AUCPCC)</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/164.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/13.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">2020 Zonal Intervention Projects (Constituency Projects) LGAs and States</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/163.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/12.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Mutual Evaluation Report: Anti-Money Laundering and Combating the Financing of Terrorism</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/162.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/11.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Nigeria National Money Laundering &amp; Terrorist Financing Risk assessment</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/161.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/10.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">NFIU Advisory on Potential ML/TF Risk Of Virtual Currency</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/168.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/17.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Record of funds and properties recovered from 2006 – April 2019</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/169.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/18.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Global Forum for Asset Recovery Progress report in Nigeria</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/170.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/19.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Aml-Cft-Compliance-Guidelines-For-Dnfis-1</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/172.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/21.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Info graphics on at least a few high profile cases completed at the Supreme Court or those in which huge assets were recovered through a Non-Conviction based procedure</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                    <a href="/infographicsitems/171.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/20.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">What EFCC did with Recovered Loots(Including 3 Annexure for further details)</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                     </a>
+                     </div>
+                       
+                 </div>
+            
+        </div>
+            </div>
+    </li>
+    <li>
+      <div class="physicianBox">
+        <div class="content" data-jo="true" data-jo-content="repeated">
+            <div class="filteredList">
+
+                <div class="">
+                    <div class="items">
+                    <a href="/infographicsitems/152.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/01.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">EFCC ACT</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/153.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/02.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">ICPC ACT</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/154.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/03.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">NFIU ACT</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/155.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/04.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Money Laundering Prohibition Act 2011</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/156.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/05.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Policy-Brief-On-TheImperative-Of-EffectiveEthics-Framework-InCombating-Corruption-InNigeria</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/157.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/06.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Report-of-Corruption-RiskAssessment-in-the-PortsSector; Report Of Gap And Compliance In Nigeria</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/158.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/07.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">National Strategy Document (2018-2020)</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/159.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/08.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">NFIU Guidance on Tax Evasion Indicators</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/160.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/09.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Money Laundering Indicators</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/167.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/17.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Summary of ICPC Enforcement Data from Inception to December 2017; (54) Guidelines for COVID-19 Procurement 2020</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/166.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/15.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">ECOWAS protocol on the fight against corruption</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/165.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/14.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">The African Union Convention on Preventing and Combating Corruption (AUCPCC)</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/164.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/13.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">2020 Zonal Intervention Projects (Constituency Projects) LGAs and States</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/163.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/12.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Mutual Evaluation Report: Anti-Money Laundering and Combating the Financing of Terrorism</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/162.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/11.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Nigeria National Money Laundering &amp; Terrorist Financing Risk assessment</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/161.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/10.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">NFIU Advisory on Potential ML/TF Risk Of Virtual Currency</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/168.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/17.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Record of funds and properties recovered from 2006 – April 2019</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/169.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/18.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Global Forum for Asset Recovery Progress report in Nigeria</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/170.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/19.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Aml-Cft-Compliance-Guidelines-For-Dnfis-1</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/172.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/21.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">Info graphics on at least a few high profile cases completed at the Supreme Court or those in which huge assets were recovered through a Non-Conviction based procedure</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                    <a href="/infographicsitems/171.html" target="_blank">
+                    <div class="card">
+                        <div class="img" style="background-image: url(../img/info2/20.png);"></div>
+                        <div class="details"> 
+                            <h5 class="">What EFCC did with Recovered Loots(Including 3 Annexure for further details)</h5>
+                            <p class="small txt-blue">05/31/2021 </p>
+                        </div>
+                    </div>
+                </a>
+                
+                
+                        </div>
+                       
+                    </div>
+            
+
+            
+
+            
+        </div>
+    </div>
+    </li>
+    
+   
+    
+  </ul>
+</div>
+  
+<div id='page_navigation'></div>
+
+
+        <!-- <div class="pagination">
+    <button class="btn small rounded white">1</button>
+    <button class="btn small rounded white">2</button>
+    <button class="btn small rounded white">...</button>
+    <button class="btn small rounded green">Next</button>
+</div> -->
+
+    </main>
+    <script src='https://code.jquery.com/jquery-1.12.4.min.js'></script><script  src="./script.js"></script>
+
+    
+<script>
+    jQuery(document).ready(function () {
+
+        //Pagination JSs
+        //how much items per page to show
+        var show_per_page = 1; 
+        //getting the amount of elements inside pagingBox div
+        var number_of_items = $('#pagingBox').children().size();
+        //calculate the number of pages we are going to have
+        var number_of_pages = Math.ceil(number_of_items/show_per_page);
+        
+        //set the value of our hidden input fields
+        $('#current_page').val(0);
+        $('#show_per_page').val(show_per_page);
+        
+        //now when we got all we need for the navigation let's make it '
+        
+        /* 
+        what are we going to have in the navigation?
+            - link to previous page
+            - links to specific pages
+            - link to next page
+        */
+        var navigation_html = '<a class="previous_link" href="javascript:previous();">Prev</a>';
+        var current_link = 0;
+        while(number_of_pages > current_link){
+            navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +')" longdesc="' + current_link +'">'+ (current_link + 1) +'</a>';
+            current_link++;
+        }
+        navigation_html += '<a class="next_link" href="javascript:next();">Next</a>';
+        
+        $('#page_navigation').html(navigation_html);
+        
+        //add active_page class to the first page link
+        $('#page_navigation .page_link:first').addClass('active_page');
+        
+        //hide all the elements inside pagingBox div
+        $('#pagingBox').children().css('display', 'none');
+        
+        //and show the first n (show_per_page) elements
+        $('#pagingBox').children().slice(0, show_per_page).css('display', 'block');
+    
+});
+
+
+
+//Pagination JS
+
+function previous(){
+    
+    new_page = parseInt($('#current_page').val()) - 1;
+    //if there is an item before the current active link run the function
+    if($('.active_page').prev('.page_link').length==true){
+        go_to_page(new_page);
+    }
+    
+}
+
+function next(){
+    new_page = parseInt($('#current_page').val()) + 1;
+    //if there is an item after the current active link run the function
+    if($('.active_page').next('.page_link').length==true){
+        go_to_page(new_page);
+    }
+    
+}
+function go_to_page(page_num){
+    //get the number of items shown per page
+    var show_per_page = parseInt($('#show_per_page').val());
+    
+    //get the element number where to start the slice from
+    start_from = page_num * show_per_page;
+    
+    //get the element number where to end the slice
+    end_on = start_from + show_per_page;
+    
+    //hide all children elements of pagingBox div, get specific items and show them
+    $('#pagingBox').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
+    
+    /*get the page link that has longdesc attribute of the current page and add active_page class to it
+    and remove that class from previously active page link*/
+    $('.page_link[longdesc=' + page_num +']').addClass('active_page').siblings('.active_page').removeClass('active_page');
+    
+    //update the current page input field
+    $('#current_page').val(page_num);
+}
+</script>
+
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ACA Portal NG</title>
+        <link rel="stylesheet" href="css/theme.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/icons.css">
+        <script src="js/main.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        p {
+  text-align: left;
+  padding-top: 1em;
+}
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+   prefixes courtesy of autoprefixer
+   */
+ul.social-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+}
+ul.social-set li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+/* Font Awesome icons */
+a.sociali {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  padding: 10px;
+  /* background: #accfc0; */
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 10px !important;
+  padding-bottom: 10px !important;
+}
+a.sociali:hover, a.sociali:focus {
+    color: #010066;
+  background: #f8f7fffa;
+}
+
+        </style>
+    </head>
+    <body>
+        <footer class="bg-dark-blue">
+            <div class="sections">
+                <div>
+                    <h5>Home</h5>
+                    <a href="http://cddwestafrica.org/"  target="_blank">cddwestafrica.org</a>
+                    <section class="">
+                        <ul class="social-set">
+                            <li><a class="sociali" href="#" target="_blank" aria-label="Twitter">
+                              <i class="fa fa-twitter fa-fw" title="Twitter"></i></a></li>
+                            <li><a class="sociali" href="#" target="_blank" aria-label="YouTube">
+                              <i class="fa fa-youtube fa-fw" title="YouTube"></i></a></li>
+                            <li><a class="sociali" href="#" target="_blank" aria-label="Instagram">
+                              <i class="fa fa-instagram fa-fw" title="Instagram"></i></a></li>
+                            <li><a class="sociali" href="#" target="_blank" aria-label="Facebook">
+                              <i class="fa fa-facebook-square fa-fw" title="Facebook"></i></a></li>
+
+
+                    </ul>
+                </section>
+
+                </div>
+                <div>
+                    <div>
+                        <h5>About</h5>
+                        <a href="./about.html#CDD">CDD</a>
+                        <a href="./about.html#MacArthur Foundation">MacArthur Foundation </a>
+                        <a href="./about.html#EFCC">EFCC </a>
+                        <a href="./about.html#ICPC">ICPC </a>
+                        <a href="./about.html#NFIU">NFIU </a>
+                        <a href="./about.html#OAuGF">OAuGF </a>
+                        <a href="./about.html#TUGAR">TUGAR </a>
+                        <a href="./about.html#PACAC">PACAC </a>
+                    </div>
+                    <div>
+                        <h5>Resources</h5>
+                        <a href="./resources.html">Publications</a>
+                        <a href="./resources.html">Gallery</a>
+                        <a href="./resources.html">Videos</a>
+                    </div>
+                    <div>
+                        <h5>Infographics</h5>
+                        <a href="./infographics.html">All infographics</a>
+                        <a href="./infographics.html">Governance </a>
+                        <a href="./infographics.html">Convictions & Recovery </a>
+                        <a href="./infographics.html">Citizens </a>
+                        <a href="./infographics.html">Agencies  </a>
+                    </div>
+                    <!-- <div>
+                        <h5>Projects</h5>
+                        <a href="./resources.html">Past projects</a>
+                        <a href="./resources.html">Present Project</a>
+                        <a href="./resources.html">Duis aliquam</a>
+                        <a href="./resources.html">Duis aliquam</a>
+                        <a href="./resources.html">Duis aliquam</a>
+                    </div> -->
+                    <div>
+                        <h5>News & Events</h5>
+                        <a href="./resources.html"> News & Events </a>
+                        <a href="./resources.html">Trending</a>
+                        <a href="./resources.html">Breaking News </a>
+                        <a href="./resources.html">Previous Posts </a>
+                        <a href="./resources.html">Upcoming Events</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="foot">
+                <img src="img/footer-logo.png" alt="">
+                <p>2021 CDDWestAfrica inc. All rights reserved.</p>
+            </div>
+        </footer> 
+    </body>
+</html>
+
+</body>
+
+</html>
+

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Table Pagination Examples</title>
+
+        <!-- <link rel="stylesheet" href="bootstrap/bootstrap.min.css" /> -->
+        <style type="text/css">
+body {
+    padding: 5px;
+}
+.table_box {
+    margin: 1cm;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid black;
+}
+.color_page {
+    background: #ccf;
+}
+
+.box div, .box ul {
+    float: right;
+}
+        </style>
+
+        <!-- <script type="text/javascript" src="paginator.js"></script> -->
+        <!-- <script type="text/javascript" src="table.js"></script> -->
+    </head>
+    <body>
+        
+        <div class="example">
+            <div id="table_box_native"></div>
+            <div id="index_native" class="box"></div>
+            
+
+            <script type="text/javascript">
+window.addEventListener("load", function () {
+    create_sample_table(document.getElementById("table_box_native"));
+    paginator({
+        table: document.getElementById("table_box_native").getElementsByTagName("table")[0],
+        box: document.getElementById("index_native"),
+        active_class: "color_page"
+    });
+}, false);
+            </script>
+        </div>
+
+        <hr />
+
+        
+        
+        
+
+        
+    </body>
+    <script>
+        function create_sample_table(parentNode, head, body, foot, data) {
+    if (typeof head == "undefined") {head = true;}
+    if (typeof body == "undefined") {body = true;}
+    if (typeof foot == "undefined") {foot = true;}
+    if (!data) {
+        data = {
+            "head": [ "Title", "Author", "Author", "Publishing Date" ],
+            "body": [
+                [ "On Becoming a Person: A Therapist's View of Psychotherapy",  "Carl Rogers",                      "September 7, 1995",     "September 7, 1995"     ],
+                [ "Psychoanalysis and Religion",                                "Erich Fromm",                      "September 10, 1959"    ],
+                [ "The Farther Reaches of Human Nature",                        "Abraham H. Maslow",                "October 1, 1993"       ],
+                [ "What Life Should Mean to You",                               "Ludwig Hain, Alfred Adler",        "November 10, 2010"     ],
+                [ "Walden Two",                                                 "B. F. Skinner",                    "1948"                  ],
+                [ "Childhood and Society",                                      "Erik H. Erikson",                  "September 17, 1993"    ],
+                [ "The Doctor and The Soul: An Introduction to Logotherapy",    "Victor E. Frankl",                 "1962"                  ],
+                [ "Our Inner Conflicts: A Constructive Theory of Neurosis",     "Karen Horney",                     "October 17, 1992"      ],
+                [ "Cognitive therapy and the emotional disorders",              "Aaron T. Beck",                    "October 1, 1979"       ],
+                [ "Humanistic Psychotherapy: The Rational-Emotive Approach",    "Albert Ellis",                     "October, 1974"         ],
+                [ "The Basic Writings of Sigmund Freud",                        "Sigmund Freud",                    "July 10, 1995"         ],
+                [ "I Ching, The Oracle of the Cosmic Way",                      "Carol K. Anthony",                 "November 25, 2002"     ],
+                [ "Baboon Mothers and Infants",                                 "Jeanne Altmann",                   "1980"                  ],
+                [ "The Autobiography of Charles Darwin: 1809-1882",             "Charles Darwin",                   "September 17, 1993"    ],
+                [ "A sacred unity: Further steps to an ecology of mind",        "Gregory Bateson",                  "1991"                  ],
+                [ "Life Cycles: Reflections of an Evolutionary Biologist",      "John Tyler Bonner",                "April 3, 1995"         ],
+                [ "Family Evaluation: An Approach Based on Bowen Theory",       "Michael E. Kerr, Murray Bowen",    "October 17, 1988"      ],
+                [ "A Secure Base",                                              "John Bowlby",                      "August 22, 1990"       ],
+                [ "The Integrative Neurobiology of Affiliation",                "Carol Sue Carter",                 "June 15, 2006"         ],
+                [ "Psychobiology of reptilian reproduction",                    "David Crews",                      "September 26, 1975"    ],
+                [ "Descartes Error: Emotion, Reason and the Human Brain",       "Antonio R Damasio",                "2006"                  ],
+                [ "Homicide",                                                   "Martin Daly, Margo Wilson",        "January 1, 1988"       ],
+                [ "On the Origin of Species",                                   "Charles Darwin",                   "November 24, 1859"     ],
+                [ "The Descent of Man",                                         "Charles Darwin",                   "February 24, 1871"     ],
+                [ "Out of the Crisis",                                          "W Edwards Deming",                 "October 2, 2000"       ],
+                [ "Good Natured",                                               "Frans B. M. de Waal",              "October 1997"          ],
+                [ "Ideas And Opinions",                                         "Albert Einstein",                  "June 6, 1995"          ],
+                [ "Time Frames:The Evolution of Punctuated Equilibria",         "Niles Eldredge",                   "1989"                  ],
+                [ "Shot in the Heart",                                          "Mikal Gilmore",                    "August 1, 1995"        ],
+                [ "Emotional Intelligence: Why It Can Matter More Than IQ",     "Daniel Goleman",                   "September 27, 2005"    ],
+                [ "The Chimpanzees of Gombe: Patterns of Behavior",             "Jane Goodall",                     "September, 1986"       ],
+                [ "Why males exist: An inquiry into the evolution of sex",      "Fred H. Hapgood",                  "1979"                  ],
+                [ "The Roots of Human Behavior",                                "Myron A. Hofer",                   "July 1981"             ],
+                [ "Sacred Hoops: Spiritual Lessons of a Hardwood Warrior",      "Phil Jackson",                     "November 7, 1996"      ],
+                [ "The Possible and the Actual",                                "Francois Jacob",                   "January 12, 1982"      ],
+                [ "The Undiscovered Self",                                      "Carl G. Jung",                     "February 7, 2006"      ],
+                [ "Out of Control",                                             "Kevin Kelly",                      "April 14, 1995"        ],
+                [ "The Emotional Brain",                                        "Joseph Ledoux",                    "March 27, 1998"        ],
+                [ "Families and Family Therapy",                                "Salvador Minuchin",                "1974"                  ],
+                [ "Will Therapy and Truth and Reality",                         "Otto Rank",                        "January 1, 1917"       ],
+                [ "Sex and Friendship in Baboons",                              "Barbara B. Smuts",                 "December 15, 1999"     ],
+                [ "The Alchemy of Finance",                                     "George Soros",                     "August 1, 2003"        ],
+                [ "Lives of a Cell: Notes of a Biology Watcher",                "Lewis Thomas",                     "February 23, 1978"     ],
+                [ "The Holy Bible: King James Version",                         "Various Authors",                  "1611"                  ],
+                [ "The Battered Women",                                         "Lenore Edna Walker",               "1979"                  ],
+                [ "The Beak of the Finch: A Story of Evolution in Our Time",    "Jonathan Weiner",                  "May 30, 1995"          ],
+                [ "Beyond Natural Selection",                                   "Robert Wesson",                    "January 29, 1993"      ],
+                [ "The Moral Sense",                                            "James Q. Wilson",                  "November 6, 1997"      ],
+                [ "Anna Freud: A Biography",                                    "Elisabeth Young-Bruehl",           "July, 1994"            ],
+            ],
+            "foot": [ "Title", "Author", "Publishing Date" ],
+        };
+    }
+    var table = document.createElement("table");
+    var tr, th, td;
+    // header
+    tr = document.createElement("tr");
+    var headers = data.head || [];
+    for (var i=0;i<headers.length;i++) {
+        th = document.createElement("th");
+        th.innerHTML = headers[i];
+        tr.appendChild(th);
+    }
+    if (head) {
+        var thead = document.createElement("thead");
+        thead.appendChild(tr);
+        table.appendChild(thead);
+    } else {
+        table.appendChild(tr);
+    }
+    // end header
+
+    // body
+    var table_body = data.body || [];
+    if (body) {
+        var tbody = document.createElement("tbody");
+    }
+    for (var i=0;i<table_body.length;i++) {
+        tr = document.createElement("tr");
+        for (var j=0;j<table_body[i].length;j++) {
+            td = document.createElement("td");
+            td.innerHTML = table_body[i][j];
+            tr.appendChild(td);
+        }
+        if (body) {
+            tbody.appendChild(tr);
+        } else {
+            table.appendChild(tr);
+        }
+    }
+    if (body) {
+        table.appendChild(tbody);
+    }
+    // end body
+
+    // footer
+    if (foot) {
+        var tfoot = document.createElement("tfoot");
+        tr = document.createElement("tr");
+        var footer = data.foot || [];
+        for (var i=0;i<footer.length;i++) {
+            th = document.createElement("th");
+            th.innerHTML = footer[i];
+            tr.appendChild(th);
+        }
+        tfoot.appendChild(tr);
+        table.appendChild(tfoot);
+    }
+    // end footer
+
+    if (parentNode) {
+        parentNode.appendChild(table);
+    }
+    //return table;
+}
+
+    </script>
+
+
+<!-- paginator -->
+<script>
+    /*****************************************************
+ * Paginator Function                                *
+ *****************************************************
+ * config : {
+ *     get_rows : function used to select rows to do pagination on
+ *         If no function is provided, checks for a config.table element and looks for rows in there to page
+ *
+ *     box : Empty element that will have page buttons added to it
+ *         If no config.box is provided, but a config.table is, then the page buttons will be added using the table
+ *
+ *     table : table element to be paginated
+ *         not required if a get_rows function is provided
+ *
+ *     rows_per_page : number of rows to display per page
+ *         default number is 10
+ *
+ *     page: page to display
+ *         default page is 1
+ *
+ *     box_mode: "list", "buttons", or function. determines how the page number buttons are built.
+ *         "list" builds the page index in list format and adds class "pagination" to the ul element. Meant for use with bootstrap
+ *         "buttons" builds the page index out of buttons
+ *         if this field is a function, it will be passed the config object as its only param and assumed to build the page index buttons
+ *
+ *     page_options: false or [{text: , value: }, ... ] used to set what the dropdown menu options are available, resets rows_per_page value
+ *         false prevents the options from being displayed
+ *         [{text: , value: }, ... ] allows you to customize what values can be chosen, a value of 0 will display all the table's rows.
+ *         the default setup is
+ *           [
+ *               { value: 5,  text: '5'   },
+ *               { value: 10, text: '10'  },
+ *               { value: 20, text: '20'  },
+ *               { value: 50, text: '50'  },
+ *               { value: 100,text: '100' },
+ *               { value: 0,  text: 'All' }
+ *           ]
+ *
+ *     active_class: set the class for page buttons to have when active.
+ *          defaults to "active"
+ *
+ *     disable: true or false, shows all rows of the table and hides pagination controlls if set to true.
+ *
+ *     tail_call: function to be called after paginator is done.
+ *
+ * }
+ */
+function paginator(config) {
+    // throw errors if insufficient parameters were given
+    if (typeof config != "object")
+        throw "Paginator was expecting a config object!";
+    if (typeof config.get_rows != "function" && !(config.table instanceof Element))
+        throw "Paginator was expecting a table or get_row function!";
+
+    // get/set if things are disabled
+    if (typeof config.disable == "undefined") {
+        config.disable = false;
+    }
+
+    // get/make an element for storing the page numbers in
+    var box;
+    if (!(config.box instanceof Element)) {
+        config.box = document.createElement("div");
+    }
+    box = config.box;
+
+    // get/make function for getting table's rows
+    if (typeof config.get_rows != "function") {
+        config.get_rows = function () {
+            var table = config.table
+            var tbody = table.getElementsByTagName("tbody")[0]||table;
+
+            // get all the possible rows for paging
+            // exclude any rows that are just headers or empty
+            children = tbody.children;
+            var trs = [];
+            for (var i=0;i<children.length;i++) {
+                if (children[i].nodeType = "tr") {
+                    if (children[i].getElementsByTagName("td").length > 0) {
+                        trs.push(children[i]);
+                    }
+                }
+            }
+
+            return trs;
+        }
+    }
+    var get_rows = config.get_rows;
+    var trs = get_rows();
+
+    // get/set rows per page
+    if (typeof config.rows_per_page == "undefined") {
+        var selects = box.getElementsByTagName("select");
+        if (typeof selects != "undefined" && (selects.length > 0 && typeof selects[0].selectedIndex != "undefined")) {
+            config.rows_per_page = selects[0].options[selects[0].selectedIndex].value;
+        } else {
+            config.rows_per_page = 10;
+        }
+    }
+    var rows_per_page = config.rows_per_page;
+
+    // get/set current page
+    if (typeof config.page == "undefined") {
+        config.page = 1;
+    }
+    var page = config.page;
+
+    // get page count
+    var pages = (rows_per_page > 0)? Math.ceil(trs.length / rows_per_page):1;
+
+    // check that page and page count are sensible values
+    if (pages < 1) {
+        pages = 1;
+    }
+    if (page > pages) {
+        page = pages;
+    }
+    if (page < 1) {
+        page = 1;
+    }
+    config.page = page;
+ 
+    // hide rows not on current page and show the rows that are
+    for (var i=0;i<trs.length;i++) {
+        if (typeof trs[i]["data-display"] == "undefined") {
+            trs[i]["data-display"] = trs[i].style.display||"";
+        }
+        if (rows_per_page > 0) {
+            if (i < page*rows_per_page && i >= (page-1)*rows_per_page) {
+                trs[i].style.display = trs[i]["data-display"];
+            } else {
+                // Only hide if pagination is not disabled
+                if (!config.disable) {
+                    trs[i].style.display = "none";
+                } else {
+                    trs[i].style.display = trs[i]["data-display"];
+                }
+            }
+        } else {
+            trs[i].style.display = trs[i]["data-display"];
+        }
+    }
+
+    // page button maker functions
+    config.active_class = config.active_class||"active";
+    if (typeof config.box_mode != "function" && config.box_mode != "list" && config.box_mode != "buttons") {
+        config.box_mode = "button";
+    }
+    if (typeof config.box_mode == "function") {
+        config.box_mode(config);
+    } else {
+        var make_button;
+        if (config.box_mode == "list") {
+            make_button = function (symbol, index, config, disabled, active) {
+                var li = document.createElement("li");
+                var a  = document.createElement("a");
+                a.href = "#";
+                a.innerHTML = symbol;
+                a.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    this.parentNode.click();
+                    return false;
+                }, false);
+                li.appendChild(a);
+
+                var classes = [];
+                if (disabled) {
+                    classes.push("disabled");
+                }
+                if (active) {
+                    classes.push(config.active_class);
+                }
+                li.className = classes.join(" ");
+                li.addEventListener("click", function () {
+                    if (this.className.split(" ").indexOf("disabled") == -1) {
+                        config.page = index;
+                        paginator(config);
+                    }
+                }, false);
+                return li;
+            }
+        } else {
+            make_button = function (symbol, index, config, disabled, active) {
+                var button = document.createElement("button");
+                button.innerHTML = symbol;
+                button.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    if (this.disabled != true) {
+                        config.page = index;
+                        paginator(config);
+                    }
+                    return false;
+                }, false);
+                if (disabled) {
+                    button.disabled = true;
+                }
+                if (active) {
+                    button.className = config.active_class;
+                }
+                return button;
+            }
+        }
+
+        // make page button collection
+        var page_box = document.createElement(config.box_mode == "list"?"ul":"div");
+        if (config.box_mode == "list") {
+            page_box.className = "pagination";
+        }
+
+        var left = make_button("&laquo;", (page>1?page-1:1), config, (page == 1), false);
+        page_box.appendChild(left);
+
+        for (var i=1;i<=pages;i++) {
+            var li = make_button(i, i, config, false, (page == i));
+            page_box.appendChild(li);
+        }
+
+        var right = make_button("&raquo;", (pages>page?page+1:page), config, (page == pages), false);
+        page_box.appendChild(right);
+        if (box.childNodes.length) {
+            while (box.childNodes.length > 1) {
+                box.removeChild(box.childNodes[0]);
+            }
+            box.replaceChild(page_box, box.childNodes[0]);
+        } else {
+            box.appendChild(page_box);
+        }
+    }
+
+    // make rows per page selector
+    if (!(typeof config.page_options == "boolean" && !config.page_options)) {
+        if (typeof config.page_options == "undefined") {
+            config.page_options = [
+                { value: 5,  text: '5'   },
+                { value: 10, text: '10'  },
+                { value: 20, text: '20'  },
+                { value: 50, text: '50'  },
+                { value: 100,text: '100' },
+                { value: 0,  text: 'All' }
+            ];
+        }
+        var options = config.page_options;
+        var select = document.createElement("select");
+        for (var i=0;i<options.length;i++) {
+            var o = document.createElement("option");
+            o.value = options[i].value;
+            o.text = options[i].text;
+            select.appendChild(o);
+        }
+        select.value = rows_per_page;
+        select.addEventListener("change", function () {
+            config.rows_per_page = this.value;
+            paginator(config);
+        }, false);
+        box.appendChild(select);
+    }
+
+    // status message
+    var stat = document.createElement("span");
+    stat.innerHTML = "On page " + page + " of " + pages
+        + ", showing rows " + (((page-1)*rows_per_page)+1)
+        + " to " + (trs.length<page*rows_per_page||rows_per_page==0?trs.length:page*rows_per_page)
+        + " of " + trs.length;
+    box.appendChild(stat);
+
+    // hide pagination if disabled
+    if (config.disable) {
+        if (typeof box["data-display"] == "undefined") {
+            box["data-display"] = box.style.display||"";
+        }
+        box.style.display = "none";
+    } else {
+        if (box.style.display == "none") {
+            box.style.display = box["data-display"]||"";
+        }
+    }
+
+    // run tail function
+    if (typeof config.tail_call == "function") {
+        config.tail_call(config);
+    }
+
+    return box;
+}
+
+</script>
+</html>
